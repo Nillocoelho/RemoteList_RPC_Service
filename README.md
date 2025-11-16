@@ -51,16 +51,6 @@ Todas as operacoes bloqueiam com `sync.Mutex` para garantir consistencia quando 
 - Mensagens informativas sao impressas no terminal do servidor mostrando o mapa em memoria e advertencias durante a recuperacao.
 - Logs de erro critico (por exemplo, falha ao abrir arquivos) encerram o processo com `log.Fatalf`.
 
-## Dicas de Desenvolvimento
+## Respostas das Perguntas levantadas:
 
-- Utilize `gofmt` para padronizar o codigo:
-  ```powershell
-  gofmt -w pkg\remotelist_rpc.go remotelist_rpc_server.go remotelist_rpc_client.go
-  ```
-- Para limpar arquivos de estado durante testes, remova `snapshot.dat` e `log.txt` antes de subir o servidor.
-
-## Possiveis Extensoes
-
-- Expor metodos de listagem completa ou reset do estado.
-- Trocar `net/rpc` por gRPC ou HTTP JSON.
-- Criar testes automatizados usando o pacote `testing` e um servidor RPC em memoria.
+- [Debate (PDF)](./Debate.pdf)
