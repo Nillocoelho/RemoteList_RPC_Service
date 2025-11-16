@@ -12,7 +12,7 @@ import (
 	// Coloque aqui o caminho CORRETO do seu módulo Go
 	// Ex: "github.com/seu-usuario/seu-projeto/pkg/remotelist"
 	// ou apenas "remotelist" se estiver na mesma pasta (menos comum)
-	"ifpb/remotelist/pkg" 
+	"ifpb/remotelist/pkg"
 )
 
 func main() {
@@ -29,20 +29,25 @@ func main() {
 	// --- 1. Testando Append ---
 	var replyBool bool
 	fmt.Println("Adicionando 10 e 20 na 'lista_A'...")
-	
+
 	argsAppendA1 := &remotelist.AppendArgs{ListID: "lista_A", Value: 10}
 	err = client.Call("RemoteList.Append", argsAppendA1, &replyBool)
-	if err != nil { log.Printf("Erro no Append A1: %v", err) }
+	if err != nil {
+		log.Printf("Erro no Append A1: %v", err)
+	}
 
 	argsAppendA2 := &remotelist.AppendArgs{ListID: "lista_A", Value: 20}
 	err = client.Call("RemoteList.Append", argsAppendA2, &replyBool)
-	if err != nil { log.Printf("Erro no Append A2: %v", err) }
+	if err != nil {
+		log.Printf("Erro no Append A2: %v", err)
+	}
 
 	fmt.Println("Adicionando 99 na 'lista_B'...")
 	argsAppendB1 := &remotelist.AppendArgs{ListID: "lista_B", Value: 99}
 	err = client.Call("RemoteList.Append", argsAppendB1, &replyBool)
-	if err != nil { log.Printf("Erro no Append B1: %v", err) }
-
+	if err != nil {
+		log.Printf("Erro no Append B1: %v", err)
+	}
 
 	// --- 2. Testando Size ---
 	var replyInt int
@@ -52,7 +57,7 @@ func main() {
 		log.Printf("Erro no Size (A): %v", err)
 	} else {
 		// Esperado: 2
-		fmt.Printf("Tamanho da 'lista_A': %d\n", replyInt) 
+		fmt.Printf("Tamanho da 'lista_A': %d\n", replyInt)
 	}
 
 	argsSizeB := &remotelist.ListArgs{ListID: "lista_B"}
