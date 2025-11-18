@@ -312,7 +312,6 @@ func (l *RemoteList) rebuildStateFromLog() {
 			}
 
 			// Fazendo a logica de append para o map.
-			// Não chamamos l.apprend() para não logar de novo!
 			lista, ok := l.list[listID]
 			if !ok {
 				lista = make([]int, 0)
@@ -323,7 +322,6 @@ func (l *RemoteList) rebuildStateFromLog() {
 		case "REMOVE":
 
 			// Fazendo a lógica de remoção diretamente.
-			// Não chamamos l.Remove()!
 			lista, ok := l.list[listID]
 			if ok && len(lista) > 0 {
 				ultimoIndice := len(lista) - 1
