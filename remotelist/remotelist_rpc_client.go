@@ -1,3 +1,15 @@
+/*
+Copyright © 2025 Danillo Coelho Barbosa.
+Todos os direitos reservados.
+
+Este código foi desenvolvido como parte da avaliação da disciplina
+de Programação Distribuída do Instituto Federal da Paraíba (IFPB),
+Campus João Pessoa.
+
+Autor: Danillo Coelho Barbosa
+Data: Novembro de 2025
+Versão: 1.0
+*/
 package main
 
 import (
