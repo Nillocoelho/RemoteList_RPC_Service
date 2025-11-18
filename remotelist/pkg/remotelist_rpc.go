@@ -225,13 +225,10 @@ func NewRemoteList() *RemoteList {
 	//Struct Criada
 	r := new(RemoteList)
 
-	// <--- CORREÇÃO: A linha 'r.list = make(...)' FOI REMOVIDA DAQUI.
-
 	// Tenta carregar o snapshot no primeiro momento
 	r.loadSnapshot()
 
 	//Caso o snapshot não exista, é inicializado com o make
-	// (Este é o local CORRETO para inicializar o mapa)
 	if r.list == nil {
 		r.list = make(map[string][]int)
 		fmt.Println("Mapa inicializado (snapshot era nil ou não existia).")

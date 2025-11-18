@@ -4,14 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/rpc"
-
-	// [ IMPORTANTE! ]
-	// Você precisa importar seu pacote remotelist.
-	// O caminho "ifpb/remotelist/pkg" é um palpite
-	// baseado no seu código original.
-	// Coloque aqui o caminho CORRETO do seu módulo Go
-	// Ex: "github.com/seu-usuario/seu-projeto/pkg/remotelist"
-	// ou apenas "remotelist" se estiver na mesma pasta (menos comum)
 	"ifpb/remotelist/pkg"
 )
 
