@@ -238,7 +238,6 @@ func NewRemoteList() *RemoteList {
 	r.rebuildStateFromLog()
 
 	//Abre o Arquivo
-	// O_APPEND escreve sempre no final do arquivo
 	// O_CREATE cria o arquivo, caso não exista
 	// O_WRONLY Abre o Arquivo para a escrita
 	// 0666 permissão padrão
